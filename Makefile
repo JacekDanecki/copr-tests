@@ -3,10 +3,11 @@ all: show_env
 	g++ -Wall -o copr-cpp-test copr-test.cpp
 
 install:
-	install copr-c-test /usr/bin
-	install copr-cpp-test /usr/bin
-	ldd /usr/bin/copr-c-test
-	ldd /usr/bin/copr-cpp-test
+	install -d ${DESTDIR}/usr/bin
+	install copr-c-test ${DESTDIR}/usr/bin
+	install copr-cpp-test ${DESTDIR}/usr/bin
+	ldd ${DESTDIR}/usr/bin/copr-c-test
+	ldd ${DESTDIR}/usr/bin/copr-cpp-test
 
 uninstall:
 	rm /usr/bin/copr-c-test /usr/bin/copr-cpp-test
