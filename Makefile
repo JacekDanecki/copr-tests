@@ -1,6 +1,6 @@
 all: show_env
-	gcc -Wall -o copr-c-test copr-test.c
-	g++ -Wall -o copr-cpp-test copr-test.cpp
+	gcc -g -Wall -o copr-c-test copr-test.c
+	g++ -g -Wall -o copr-cpp-test copr-test.cpp
 
 install:
 	install -d ${DESTDIR}/usr/bin
